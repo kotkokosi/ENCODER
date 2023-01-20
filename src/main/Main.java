@@ -1,5 +1,10 @@
+package main;
+
+import controller.Option;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Option option = new Option();
+        option.optionEncryption();
     }
 }
