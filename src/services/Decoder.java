@@ -32,13 +32,13 @@ public class Decoder extends IOFoundation {
     public void decoding(int key, Path inputFile, Path outputFile) {
         char[] message = fileToCharArray(inputFile);
         char[] letters = RU;
-        int key1 = Math.abs(key);
+
         for (int i = 0; i < message.length; i++) {
             for (int j = 0; j < letters.length; j++) {
                 if (message[i] == letters[j]) {
-                    int num = Math.abs(j - key1);
-                    int index = num % (letters.length - 1);
-                    message[i] = letters[index];
+                    int index = Math.abs(key) % (letters.length - 1);
+                    int num = Math.abs(j - index);
+                    message[i] = letters[num];
                     break;
                 }
             }

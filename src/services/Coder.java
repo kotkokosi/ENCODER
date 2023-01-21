@@ -34,11 +34,11 @@ public class Coder extends IOFoundation {
     public void coding(int key, Path inputFile, Path outputFile) {
         char[] message = fileToCharArray(inputFile);
         char[] letters = RU;
-        int key1 = Math.abs(key);
+
         for (int i = 0; i < message.length; i++) {
             for (int j = 0; j < letters.length; j++) {
                 if (message[i] == letters[j]) {
-                    int index = (j + key1) % (letters.length - 1);
+                    int index = Math.abs(j + key) % (letters.length - 1);
                     message[i] = letters[index];
                     break;
                 }
