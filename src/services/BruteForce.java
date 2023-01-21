@@ -32,10 +32,10 @@ public class BruteForce extends IOFoundation {
         for (int key = 0; key < messageArray.length; key++) {
             massageCopyArray = Arrays.copyOf(messageArray, messageArray.length);
             messageArray = decoder(key, messageArray, lettersArray);
-            double spaceFrequency1 = spaceFrequency(messageArray);
-            double letterAaFrequency1 = letterAaFrequency(messageArray);
+            double spaceFrequencyResult = spaceFrequency(messageArray);
+            double letterAaFrequencyResult = letterAaFrequency(messageArray);
 
-            if (spaceFrequency1 >= 0.120 && spaceFrequency1 <= 0.170 && letterAaFrequency1 >= 0.040 && letterAaFrequency1 <= 0.090) {
+            if (spaceFrequencyResult >= 0.120 && spaceFrequencyResult <= 0.170 && letterAaFrequencyResult >= 0.040 && letterAaFrequencyResult <= 0.090) {
                 charArrayToFile(messageArray, outputFile);
                 break;
             }

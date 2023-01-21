@@ -36,7 +36,7 @@ public class Decoder extends IOFoundation {
         for (int i = 0; i < message.length; i++) {
             for (int j = 0; j < letters.length; j++) {
                 if (message[i] == letters[j]) {
-                    int num = j - key1 < 0 ? (j - key1) * -1 : j - key1;
+                    int num = Math.abs(j - key1);
                     int index = num % (letters.length - 1);
                     message[i] = letters[index];
                     break;

@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3aa9b30-4710-4600-8ce2-d5b761b7a16d" name="Changes" comment="">
+    <list default="true" id="c3aa9b30-4710-4600-8ce2-d5b761b7a16d" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constans/Alfabet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/constans/Alfabet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constans/MessageForSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/constans/MessageForSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Check.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Option.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Option.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ParameterInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ParameterInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/BruteForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/BruteForce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/Coder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Coder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/Decoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Decoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/IOFoundation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/IOFoundation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +53,14 @@
       <option name="presentableId" value="Default" />
       <updated>1674244469938</updated>
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1674256551814</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674256551814</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -73,5 +73,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
