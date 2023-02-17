@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3aa9b30-4710-4600-8ce2-d5b761b7a16d" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/path" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/s.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/s1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interface/Action.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interface/ActionBruteForce.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interface/ChangePosition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constans/Alphabet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constans/Alfabet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constans/MessageForSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/constans/MessageForSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Option.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Option.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/BruteForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/BruteForce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/Coder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Coder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/Decoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Decoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/IOFoundation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/IOFoundation.java" afterDir="false" />
-    </list>
+    <list default="true" id="c3aa9b30-4710-4600-8ce2-d5b761b7a16d" name="Changes" comment="update:&#10;add Interface&#10;fix the program encodes and decodes with any keys" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674303931816</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update:&#10;add Interface&#10;fix the program encodes and decodes with any keys">
+      <created>1676674284611</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676674284611</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -109,7 +100,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update:&#10;add Interface&#10;fix the program encodes and decodes with any keys" />
+    <option name="LAST_COMMIT_MESSAGE" value="update:&#10;add Interface&#10;fix the program encodes and decodes with any keys" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
