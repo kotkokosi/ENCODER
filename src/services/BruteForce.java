@@ -5,7 +5,7 @@ import controller.ParameterInput;
 import java.nio.file.Path;
 import java.util.Arrays;
 
-import static constans.Alfabet.RU;
+import static constans.Alphabet.RU_ALPHABET;
 
 public class BruteForce extends IOFoundation {
     public Path getInputFile() {
@@ -16,8 +16,8 @@ public class BruteForce extends IOFoundation {
         return outputFile;
     }
 
-    private Path inputFile;
-    private Path outputFile;
+    private final Path inputFile;
+    private final Path outputFile;
 
     public BruteForce() {
         this.inputFile = ParameterInput.enterInputFile();
@@ -26,53 +26,61 @@ public class BruteForce extends IOFoundation {
 
     public void bruteForce(Path inputFile, Path outputFile) {
         char[] messageArray = fileToCharArray(inputFile);
-        char[] massageCopyArray;
-        char[] lettersArray = RU;
+        char[] massageCopyArray = Arrays.copyOf(messageArray, messageArray.length);
 
         for (int key = 0; key < messageArray.length; key++) {
-            massageCopyArray = Arrays.copyOf(messageArray, messageArray.length);
-            messageArray = decoder(key, messageArray, lettersArray);
-            double spaceFrequencyResult = spaceFrequency(messageArray);
-            double letterAaFrequencyResult = letterAaFrequency(messageArray);
-
-            if (spaceFrequencyResult >= 0.120 && spaceFrequencyResult <= 0.170 && letterAaFrequencyResult >= 0.040 && letterAaFrequencyResult <= 0.090) {
+            messageArray = actionToCode(key, messageArray, RU_ALPHABET);
+            if (spaceFrequency(messageArray) && letterAaFrequency(messageArray)) {
                 charArrayToFile(messageArray, outputFile);
                 break;
             }
             messageArray = massageCopyArray;
         }
     }
-    public double spaceFrequency(char[] decoderArray) {
+
+    public boolean spaceFrequency(char[] decoderArray) {
         double count = 0;
         for (char c : decoderArray) {
             if (c == ' ') {
                 count++;
             }
         }
-        return count / decoderArray.length;
+        double result = count / decoderArray.length;
+        return result >= 0.120 && result <= 0.170;
     }
 
-    public double letterAaFrequency(char[] decoderArray) {
+    public boolean letterAaFrequency(char[] decoderArray) {
         double count = 0;
         for (char c : decoderArray) {
             if (c == 'А' || c == 'а') {
                 count++;
             }
         }
-        return count / decoderArray.length;
+        double result = count / decoderArray.length;
+        return result >= 0.040 && result <= 0.090;
     }
 
-    public char[] decoder(int key, char[] message, char[] letters) {
+    public char[] actionToCode(int key, char[] message, char[] ruAlphabetLength) {
         for (int i = 0; i < message.length; i++) {
-            for (int j = 0; j < letters.length; j++) {
-                if (message[i] == letters[j]) {
-                    int num = j - key < 0 ? (j - key) * -1 : j - key;
-                    int index = num % (letters.length - 1);
-                    message[i] = letters[index];
+            for (int j = 0; j < ruAlphabetLength.length; j++) {
+                if (message[i] == ruAlphabetLength[j]) {
+                    message[i] = ruAlphabetLength[position(j, key, ruAlphabetLength.length)];
                     break;
                 }
             }
         }
         return message;
+    }
+
+    public int position(int nowMarkRu, int key, int ruAlphabetLength) {
+        int index = (Math.abs(key) % (ruAlphabetLength - 1));
+        if (key >= 0) {
+            if (nowMarkRu < index) {
+                return ((ruAlphabetLength - 1) + nowMarkRu) - index;
+            }
+            return Math.abs(nowMarkRu - index) % (ruAlphabetLength - 1);
+        } else {
+            return Math.abs(nowMarkRu + index) % (ruAlphabetLength - 1);
+        }
     }
 }

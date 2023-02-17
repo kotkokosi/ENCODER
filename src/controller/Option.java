@@ -11,12 +11,12 @@ public class Option {
         switch (ParameterInput.enterMode()) {
             case 1 -> {
                 Coder coder = new Coder();
-                coder.coding(coder.getKey(), coder.getInputFile(), coder.getOutputFile());
+                coder.actionToCode(coder.getKey(), coder.getInputFile(), coder.getOutputFile());
                 System.out.println(SUCCESSFULL);
             }
             case 2 -> {
                 Decoder decoder = new Decoder();
-                decoder.decoding(decoder.getKey(), decoder.getInputFile(), decoder.getOutputFile());
+                decoder.actionToCode(decoder.getKey(), decoder.getInputFile(), decoder.getOutputFile());
                 System.out.println(SUCCESSFULL);
             }
             case 3 -> {
@@ -24,6 +24,7 @@ public class Option {
                 bruteForce.bruteForce(bruteForce.getInputFile(), bruteForce.getOutputFile());
                 System.out.println(SUCCESSFULL);
             }
+            default -> throw new IllegalStateException("Unexpected value: " + ParameterInput.enterMode());
         }
     }
 }

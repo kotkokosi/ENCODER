@@ -1,14 +1,16 @@
 package services;
 
 
+import Interface.Action;
+import Interface.ChangePosition;
 import controller.ParameterInput;
 
 import java.nio.file.Path;
 
-import static constans.Alfabet.RU;
+import static constans.Alphabet.RU_ALPHABET;
 
 
-public class Coder extends IOFoundation {
+public class Coder extends IOFoundation implements ChangePosition, Action {
     public Path getInputFile() {
         return inputFile;
     }
@@ -21,29 +23,32 @@ public class Coder extends IOFoundation {
         return key;
     }
 
-    private Path inputFile;
-    private Path outputFile;
-    private int key;
+    private final Path inputFile;
+    private final Path outputFile;
+    private final int key;
 
     public Coder() {
+        super();
         this.key = ParameterInput.enterKey();
         this.inputFile = ParameterInput.enterInputFile();
         this.outputFile = ParameterInput.enterOutFile();
     }
 
-    public void coding(int key, Path inputFile, Path outputFile) {
+    public void actionToCode(int key, Path inputFile, Path outputFile) { // Method encode
         char[] message = fileToCharArray(inputFile);
-        char[] letters = RU;
-
         for (int i = 0; i < message.length; i++) {
-            for (int j = 0; j < letters.length; j++) {
-                if (message[i] == letters[j]) {
-                    int index = Math.abs(j + key) % (letters.length - 1);
-                    message[i] = letters[index];
+            for (int j = 0; j < RU_ALPHABET.length; j++) {
+                if (message[i] == RU_ALPHABET[j]) {
+                    message[i] = RU_ALPHABET[position(j, key, RU_ALPHABET.length)];
                     break;
                 }
             }
         }
         charArrayToFile(message, outputFile);
+    }
+
+    @Override
+    public int position(int nowMarkRu, int key, int ruAlphabetLength) {
+        return Math.abs(nowMarkRu + key) % (ruAlphabetLength - 1);
     }
 }
