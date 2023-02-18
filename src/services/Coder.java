@@ -2,15 +2,17 @@ package services;
 
 
 import Interface.Action;
-import Interface.ChangePosition;
+import Interface.HelpMethodAction;
 import controller.ParameterInput;
 
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.stream.Stream;
 
 import static constans.Alphabet.RU_ALPHABET;
 
 
-public class Coder extends IOFoundation implements ChangePosition, Action {
+public class Coder extends IOFoundation implements HelpMethodAction, Action {
     public Path getInputFile() {
         return inputFile;
     }
@@ -34,12 +36,12 @@ public class Coder extends IOFoundation implements ChangePosition, Action {
         this.outputFile = ParameterInput.enterOutFile();
     }
 
-    public void actionToCode(int key, Path inputFile, Path outputFile) { // Method encode
-        char[] message = fileToCharArray(inputFile);
-        for (int i = 0; i < message.length; i++) {
-            for (int j = 0; j < RU_ALPHABET.length; j++) {
-                if (message[i] == RU_ALPHABET[j]) {
-                    message[i] = RU_ALPHABET[position(j, key, RU_ALPHABET.length)];
+    public void actionToCode(int key, Path inputFile, Path outputFile) {
+        ArrayList<Character> message = fileToCharArray(inputFile);
+        for (int i = 0; i < message.size(); i++) {
+            for (int j = 0; j < RU_ALPHABET.size(); j++) {
+                if (message.get(i) == RU_ALPHABET.get(j)) {
+                    message.set(i, RU_ALPHABET.get(position(j, key, RU_ALPHABET.size()))) ;
                     break;
                 }
             }

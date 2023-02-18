@@ -1,8 +1,6 @@
 package Interface;
 
-import java.nio.file.Path;
-
-public interface ChangePosition {
+public interface HelpMethodAction {
 
     int position(int nowMarkRu, int key, int lettersLength);
 }

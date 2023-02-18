@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3aa9b30-4710-4600-8ce2-d5b761b7a16d" name="Changes" comment="update:&#10;add Interface&#10;fix the program encodes and decodes with any keys" />
+    <list default="true" id="c3aa9b30-4710-4600-8ce2-d5b761b7a16d" name="Changes" comment="update:&#10;add Interface&#10;fix the program encodes and decodes with any keys">
+      <change afterPath="$PROJECT_DIR$/src/Interface/HelpMethodBrutteForce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interface/ActionBruteForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface/ActionBruteForce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interface/ChangePosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface/HelpMethodAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constans/Alphabet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/constans/Alphabet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/BruteForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/BruteForce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/Coder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Coder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/Decoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Decoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/IOFoundation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/IOFoundation.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,9 +30,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2KbXtFnhPF4pDtfg4aaZY6EehIu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -84,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676674284611</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update:&#10;add Interface&#10;fix the program encodes and decodes with any keys">
+      <created>1676674711569</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676674711569</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,7 +113,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -102,20 +135,5 @@
     <MESSAGE value="update" />
     <MESSAGE value="update:&#10;add Interface&#10;fix the program encodes and decodes with any keys" />
     <option name="LAST_COMMIT_MESSAGE" value="update:&#10;add Interface&#10;fix the program encodes and decodes with any keys" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/services/BruteForce.java</url>
-          <line>26</line>
-          <properties class="services.BruteForce" method="bruteForce">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

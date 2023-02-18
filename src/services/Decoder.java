@@ -1,14 +1,15 @@
 package services;
 
 import Interface.Action;
-import Interface.ChangePosition;
+import Interface.HelpMethodAction;
 import controller.ParameterInput;
 
 import java.nio.file.Path;
+import java.util.ArrayList;
 
 import static constans.Alphabet.RU_ALPHABET;
 
-public class Decoder extends IOFoundation implements Action, ChangePosition {
+public class Decoder extends IOFoundation implements Action, HelpMethodAction {
     public Path getInputFile() {
         return inputFile;
     }
@@ -33,11 +34,11 @@ public class Decoder extends IOFoundation implements Action, ChangePosition {
 
     @Override
     public void actionToCode(int key, Path inputFile, Path outputFile) {
-        char[] message = fileToCharArray(inputFile);
-        for (int i = 0; i < message.length; i++) {
-            for (int j = 0; j < RU_ALPHABET.length; j++) {
-                if (message[i] == RU_ALPHABET[j]) {
-                    message[i] = RU_ALPHABET[position(j, key, RU_ALPHABET.length)];
+        ArrayList<Character> message = fileToCharArray(inputFile);
+        for (int i = 0; i < message.size(); i++) {
+            for (int j = 0; j < RU_ALPHABET.size(); j++) {
+                if (message.get(i) == RU_ALPHABET.get(j)) {
+                    message.set(i, RU_ALPHABET.get(position(j, key, RU_ALPHABET.size())));
                     break;
                 }
             }
