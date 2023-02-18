@@ -3,8 +3,10 @@ package controller;
 import services.BruteForce;
 import services.Coder;
 import services.Decoder;
+import services.Language;
 
 import static constans.MessageForSelection.SUCCESSFULL;
+import static services.Language.getLanguage;
 
 public class Option {
     public void optionEncryption() {
@@ -21,8 +23,13 @@ public class Option {
             }
             case 3 -> {
                 BruteForce bruteForce = new BruteForce();
-                bruteForce.bruteForce(bruteForce.getInputFile(), bruteForce.getOutputFile());
+                bruteForce.bruteForce(bruteForce.getInputFile(), bruteForce.getOutputFile(), getLanguage());
                 System.out.println(SUCCESSFULL);
+            }
+            case 4 -> {
+                Language language = new Language();
+                language.setLanguage();
+                optionEncryption();
             }
             default -> throw new IllegalStateException("Unexpected value: " + ParameterInput.enterMode());
         }

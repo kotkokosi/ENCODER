@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3aa9b30-4710-4600-8ce2-d5b761b7a16d" name="Changes" comment="update:&#10;add Interface&#10;fix the program encodes and decodes with any keys">
-      <change afterPath="$PROJECT_DIR$/src/Interface/HelpMethodBrutteForce.java" afterDir="false" />
+    <list default="true" id="c3aa9b30-4710-4600-8ce2-d5b761b7a16d" name="Changes" comment="update:&#10;array to ArrayList &#10;some lambda">
+      <change afterPath="$PROJECT_DIR$/src/services/Language.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Interface/ActionBruteForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface/ActionBruteForce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interface/ChangePosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface/HelpMethodAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interface/HelpMethodBrutteForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface/HelpMethodBruteForce.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constans/Alphabet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/constans/Alphabet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constans/MessageForSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/constans/MessageForSelection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Option.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Option.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ParameterInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ParameterInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/BruteForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/BruteForce.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/Coder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Coder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/Decoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Decoder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/IOFoundation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/IOFoundation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -105,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676674711569</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update:&#10;array to ArrayList &#10;some lambda">
+      <created>1676717302240</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676717302240</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,6 +143,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <MESSAGE value="update:&#10;add Interface&#10;fix the program encodes and decodes with any keys" />
-    <option name="LAST_COMMIT_MESSAGE" value="update:&#10;add Interface&#10;fix the program encodes and decodes with any keys" />
+    <MESSAGE value="update:&#10;array to ArrayList &#10;some lambda" />
+    <option name="LAST_COMMIT_MESSAGE" value="update:&#10;array to ArrayList &#10;some lambda" />
   </component>
 </project>

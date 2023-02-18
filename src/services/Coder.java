@@ -7,7 +7,7 @@ import controller.ParameterInput;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.stream.Stream;
+
 
 import static constans.Alphabet.RU_ALPHABET;
 
@@ -35,7 +35,7 @@ public class Coder extends IOFoundation implements HelpMethodAction, Action {
         this.inputFile = ParameterInput.enterInputFile();
         this.outputFile = ParameterInput.enterOutFile();
     }
-
+    @Override
     public void actionToCode(int key, Path inputFile, Path outputFile) {
         ArrayList<Character> message = fileToCharArray(inputFile);
         for (int i = 0; i < message.size(); i++) {

@@ -1,17 +1,13 @@
 package services;
 
 import Interface.ActionBruteForce;
-import Interface.HelpMethodBrutteForce;
+import Interface.HelpMethodBruteForce;
 import controller.ParameterInput;
-
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 
-import static constans.Alphabet.RU_ALPHABET;
 
-public class BruteForce extends IOFoundation implements ActionBruteForce, HelpMethodBrutteForce {
+public class BruteForce extends IOFoundation implements ActionBruteForce, HelpMethodBruteForce {
     public Path getInputFile() {
         return inputFile;
     }
@@ -28,12 +24,12 @@ public class BruteForce extends IOFoundation implements ActionBruteForce, HelpMe
         this.outputFile = ParameterInput.enterOutFile();
     }
 
-    public void actionToCode(Path inputFile, Path outputFile) {
+    public void bruteForce(Path inputFile, Path outputFile, ArrayList<Character> language) {
         ArrayList<Character> messageArray = fileToCharArray(inputFile);
         ArrayList<Character> massageCopyArray = messageArray;
 
         for (int key = 0; key < messageArray.size(); key++) {
-            messageArray = actionToCode(key, messageArray, (ArrayList<Character>) RU_ALPHABET);
+            messageArray = actionToCode(key, messageArray, language);
             if (spaceFrequency(messageArray) && letterAaFrequency(messageArray)) {
                 charArrayToFile(messageArray, outputFile);
                 break;
@@ -56,11 +52,11 @@ public class BruteForce extends IOFoundation implements ActionBruteForce, HelpMe
         return result >= 0.040 && result <= 0.090;
     }
 
-    public ArrayList<Character> actionToCode(int key, ArrayList<Character> message, ArrayList<Character> ruAlphabetLength) {
+    public ArrayList<Character> actionToCode(int key, ArrayList<Character> message, ArrayList<Character> ruAlphabet) {
         for (int i = 0; i < message.size(); i++) {
-            for (int j = 0; j < ruAlphabetLength.size(); j++) {
-                if (message.get(i) == ruAlphabetLength.get(j)) {
-                    message.set(i, ruAlphabetLength.get(position(j, key, ruAlphabetLength.size())));
+            for (int j = 0; j < ruAlphabet.size(); j++) {
+                if (message.get(i) == ruAlphabet.get(j)) {
+                    message.set(i, ruAlphabet.get(position(j, key, ruAlphabet.size())));
                     break;
                 }
             }

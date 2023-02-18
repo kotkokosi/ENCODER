@@ -16,7 +16,7 @@ public abstract class IOFoundation {
             while (buffer.ready()) {
                 str.append((char) buffer.read());
             }
-            return (ArrayList<Character>) (str.toString()).chars().mapToObj(c -> (char) c).collect(Collectors.toList());`
+            return (ArrayList<Character>) (str.toString()).chars().mapToObj(c -> (char) c).collect(Collectors.toList());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

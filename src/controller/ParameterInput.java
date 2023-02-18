@@ -12,7 +12,7 @@ public class ParameterInput {
         System.out.print(CHOISE_TO_ENCODING);
         while (true) {
             String s = sc.nextLine();
-            if (s.equals("1") || s.equals("2") || s.equals("3")) {
+            if (s.equals("1") || s.equals("2") || s.equals("3") || s.equals("4")) {
                 return Integer.parseInt(s);
             } else {
                 System.out.println("-".repeat(120));
