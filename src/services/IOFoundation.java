@@ -24,7 +24,11 @@ public abstract class IOFoundation {
 
     public void charArrayToFile(ArrayList<Character> message, Path outputFile) {
         try (BufferedWriter buffer = Files.newBufferedWriter(Files.createFile(outputFile))) {
-            buffer.write(message.toString());
+            StringBuilder builder = new StringBuilder(message.size());
+            for(Character ch: message) {
+                builder.append(ch);
+            }
+            buffer.write(builder.toString());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

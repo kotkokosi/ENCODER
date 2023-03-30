@@ -37,7 +37,7 @@ public class Decoder extends IOFoundation implements Action, HelpMethodAction {
         ArrayList<Character> message = fileToCharArray(inputFile);
         for (int i = 0; i < message.size(); i++) {
             for (int j = 0; j < RU_ALPHABET.size(); j++) {
-                if (message.get(i) == RU_ALPHABET.get(j)) {
+                if (message.get(i).equals(RU_ALPHABET.get(j))) {
                     message.set(i, RU_ALPHABET.get(position(j, key, RU_ALPHABET.size())));
                     break;
                 }

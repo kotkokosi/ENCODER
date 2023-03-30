@@ -6,6 +6,7 @@ import controller.ParameterInput;
 import java.nio.file.Path;
 import java.util.ArrayList;
 
+import static constans.Alphabet.RU_ALPHABET;
 
 public class BruteForce extends IOFoundation implements ActionBruteForce, HelpMethodBruteForce {
     public Path getInputFile() {
@@ -54,9 +55,9 @@ public class BruteForce extends IOFoundation implements ActionBruteForce, HelpMe
 
     public ArrayList<Character> actionToCode(int key, ArrayList<Character> message, ArrayList<Character> ruAlphabet) {
         for (int i = 0; i < message.size(); i++) {
-            for (int j = 0; j < ruAlphabet.size(); j++) {
-                if (message.get(i) == ruAlphabet.get(j)) {
-                    message.set(i, ruAlphabet.get(position(j, key, ruAlphabet.size())));
+            for (int j = 0; j < RU_ALPHABET.size(); j++) {
+                if (message.get(i).equals(RU_ALPHABET.get(j))) {
+                    message.set(i, RU_ALPHABET.get(position(j, key, RU_ALPHABET.size())));
                     break;
                 }
             }
